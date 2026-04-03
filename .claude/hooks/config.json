@@ -1,0 +1,32 @@
+{
+  "description": "Hook Orchestrator Configuration — manages which agents run on which events",
+  "agents": {
+    "git-guard": {
+      "enabled": true,
+      "description": "Block commits/pushes AND source edits on protected branches — forces feature branch workflow",
+      "script": "agents/git-guard.sh",
+      "events": ["PreToolUse"],
+      "matcher": "Bash|Edit|Write",
+      "priority": 1,
+      "blocking": true
+    },
+    "secrets-guard": {
+      "enabled": true,
+      "description": "Block hardcoded secrets, API keys, passwords, and credentials",
+      "script": "agents/secrets-guard.sh",
+      "events": ["PreToolUse"],
+      "matcher": "Edit|Write",
+      "priority": 2,
+      "blocking": true
+    },
+    "notify-agent": {
+      "enabled": true,
+      "description": "Desktop notification when Claude finishes or needs input",
+      "script": "agents/notify-agent.sh",
+      "events": ["Notification"],
+      "matcher": "",
+      "priority": 99,
+      "blocking": false
+    }
+  }
+}
