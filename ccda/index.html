@@ -28,7 +28,7 @@ h1 em{font-style:italic;font-weight:400;color:rgba(255,255,255,.8)}
 h2{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:700;line-height:1.2;color:var(--indigo);margin-bottom:1rem}
 h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
 .lead{font-size:15px;color:#444;line-height:1.8}
-.lead.wh{color:rgba(255,255,255,.75)}
+.lead.wh{color:rgba(255,255,255,.88)}
 .shd{margin-bottom:44px}
 .btn{display:inline-block;padding:12px 28px;border-radius:6px;font-family:'Sen',sans-serif;font-size:14px;font-weight:700;text-decoration:none;transition:transform .18s,filter .18s}
 .btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
@@ -57,13 +57,13 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
 .hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;width:fit-content}
 .hero-badge-dot{width:8px;height:8px;background:#86EFAC;border-radius:50%;animation:pulse 2s infinite}
 .hero-badge span{font-size:12px;font-weight:700;color:#fff;letter-spacing:.08em;text-transform:uppercase}
-.hero-txt p{font-size:15px;color:rgba(255,255,255,.72);max-width:500px;line-height:1.8}
+.hero-txt p{font-size:15px;color:rgba(255,255,255,.88);max-width:500px;line-height:1.8}
 .hero-btns{display:flex;gap:12px;flex-wrap:wrap}
 .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:32px;display:flex;flex-direction:column;gap:20px}
 .hcard-logo{display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.95);border-radius:8px;padding:20px;min-height:80px}
 .hcard-logo span{font-size:22px;font-weight:800;color:var(--indigo);letter-spacing:-0.02em}
 .hcard-name{font-size:17px;font-weight:800;color:#fff}
-.hcard-sub{font-size:12px;color:rgba(255,255,255,.55);line-height:1.5}
+.hcard-sub{font-size:12px;color:rgba(255,255,255,.7);line-height:1.5}
 .hcard-tag{display:inline-block;padding:4px 12px;border-radius:20px;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;background:rgba(155,65,144,.4);color:#e0b8e0;width:fit-content}
 /* ABOUT CCDA */
 .about-sec{padding:80px 0;background:#fff}
@@ -90,7 +90,7 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
 .feat-card:hover{background:rgba(155,65,144,.25)}
 .feat-ico{font-size:22px}
 .feat-card h3{font-size:14px;font-weight:700;color:#fff}
-.feat-card p{font-size:13px;color:#c4b5fd;line-height:1.65}
+.feat-card p{font-size:13px;color:#e0d4ff;line-height:1.65}
 /* IMPACT */
 .impact-sec{padding:80px 0}
 .impact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--grey);border:1px solid var(--grey);border-radius:8px;overflow:hidden;margin-top:44px}
@@ -108,12 +108,12 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
 .cta-sec{background:linear-gradient(135deg,var(--orchid) 0%,var(--indigo) 100%);padding:80px 5vw;text-align:center;position:relative;overflow:hidden}
 .cta-sec::before{content:'';position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(255,255,255,.07);top:-150px;right:-80px}
 .cta-sec h2{color:#fff;max-width:560px;margin:0 auto 14px}
-.cta-sec p{color:rgba(255,255,255,.72);max-width:460px;margin:0 auto 32px}
+.cta-sec p{color:rgba(255,255,255,.88);max-width:460px;margin:0 auto 32px}
 .cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;position:relative;z-index:1}
 /* FOOTER */
 .footer{background:#1a1a2e;padding:40px 5vw;border-top:1px solid rgba(255,255,255,.08)}
 .footer-inner{max-width:1140px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
-.footer a{color:rgba(255,255,255,.5);text-decoration:none;font-size:13px;font-weight:600}
+.footer a{color:rgba(255,255,255,.7);text-decoration:none;font-size:13px;font-weight:600}
 .footer a:hover{color:#fff}
 .footer p{font-size:12px;color:rgba(255,255,255,.35)}
 .footer-links{display:flex;gap:24px}
@@ -127,12 +127,17 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
   .prog-grid,.feat-grid,.impact-grid{grid-template-columns:1fr}
   .nav-links a:not(.nav-cta){display:none}
 }
+.skip-link{position:absolute;top:-40px;left:0;background:var(--indigo,#303186);color:#fff;padding:8px 16px;z-index:1000;font-size:14px;font-weight:700;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:0}
+:focus-visible{outline:2px solid var(--orchid,#9B4190);outline-offset:2px}
+a:focus-visible,button:focus-visible,.btn:focus-visible{outline:2px solid var(--orchid,#9B4190);outline-offset:2px;border-radius:4px}
 </style>
 </head>
 <body>
+<a href="#main" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
-<nav class="nav">
+<nav class="nav" aria-label="Main navigation">
   <div class="w">
     <div class="nav-left">
       <a href="https://partnerships.stellarmentoring.com" class="nav-back">All Partnerships</a>
@@ -146,8 +151,9 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
   </div>
 </nav>
 
+<main id="main">
 <!-- HERO -->
-<header class="hero">
+<header class="hero" aria-label="Introduction">
   <div class="w">
     <div class="hero-inner">
       <div class="hero-txt">
@@ -191,19 +197,19 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
       </div>
       <div class="about-facts">
         <div class="fact">
-          <div class="fact-ico">🏙️</div>
+          <div class="fact-ico" aria-hidden="true">🏙️</div>
           <div><h4>Based in Chicago, Illinois</h4><p>Headquartered on the West Side of Chicago, CCDA works nationwide across under-resourced communities in the United States.</p></div>
         </div>
         <div class="fact">
-          <div class="fact-ico">🤝</div>
+          <div class="fact-ico" aria-hidden="true">🤝</div>
           <div><h4>National Network of Practitioners</h4><p>CCDA connects thousands of community development leaders — pastors, organisers, educators, and advocates — through shared training, events, and peer connection.</p></div>
         </div>
         <div class="fact">
-          <div class="fact-ico">📖</div>
+          <div class="fact-ico" aria-hidden="true">📖</div>
           <div><h4>Rooted in the CCD Philosophy</h4><p>Built on the 8 components of Christian Community Development, including reconciliation, relocation, redistribution, and leadership development.</p></div>
         </div>
         <div class="fact">
-          <div class="fact-ico">🌱</div>
+          <div class="fact-ico" aria-hidden="true">🌱</div>
           <div><h4>Mentoring at the Heart</h4><p>Leadership development — through mentoring, coaching, and shared learning — is central to CCDA's mission to sustain and empower grassroots leaders.</p></div>
         </div>
       </div>
@@ -221,19 +227,19 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
     </div>
     <div class="prog-grid">
       <div class="prog-card">
-        <div class="prog-ico">🤝</div>
-        <h3>Thoughtful Matching</h3>
-        <p>Mentors and mentees are paired based on goals, geography, ministry context, and community development experience.</p>
+        <div class="prog-ico" aria-hidden="true">🌱</div>
+        <h3>Growing Grassroots Leaders</h3>
+        <p>Stellar helped CCDA connect seasoned community development practitioners with emerging leaders — passing on decades of lived experience across neighborhoods and cities.</p>
       </div>
       <div class="prog-card">
-        <div class="prog-ico">👥</div>
-        <h3>100 Community Leaders</h3>
-        <p>Room for up to 100 active mentors and mentees — growing alongside the CCDA community.</p>
+        <div class="prog-ico" aria-hidden="true">🤝</div>
+        <h3>Structured Mentoring at Scale</h3>
+        <p>We gave CCDA's coordinators the tools to match, track, and support mentoring pairs — so they could focus on relationships, not spreadsheets.</p>
       </div>
       <div class="prog-card">
-        <div class="prog-ico">💬</div>
-        <h3>Ongoing Support</h3>
-        <p>Onboarding guidance, templates, and dedicated support so coordinators and participants feel confident from day one.</p>
+        <div class="prog-ico" aria-hidden="true">🏘️</div>
+        <h3>Strengthening the Network</h3>
+        <p>By making mentoring accessible across geographies and ministries, Stellar helped CCDA deepen the bonds that hold their community together.</p>
       </div>
     </div>
   </div>
@@ -245,17 +251,17 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
     <div class="plat-hd">
       <div>
         <div class="ey ey-w">Powered by Stellar Mentoring</div>
-        <h2 style="color:#fff;">Technology That <span style="font-style:italic;font-weight:400;color:#c4b5fd;">Serves the Mission</span></h2>
+        <h2 style="color:#fff;">Technology That <span style="font-style:italic;font-weight:400;color:#e0d4ff;">Serves the Mission</span></h2>
       </div>
       <p class="lead wh">Stellar handles all the operational complexity of running a mentoring programme — so CCDA's team can focus on what matters most: developing leaders who transform communities.</p>
     </div>
     <div class="feat-grid">
-      <div class="feat-card"><div class="feat-ico">🤖</div><h3>Magic Match AI</h3><p>Intelligent matching based on goals, experience, and community context — ensuring every pairing has real potential.</p></div>
-      <div class="feat-card"><div class="feat-ico">📅</div><h3>Structured Journey</h3><p>Clear programme frameworks with flexible conversations — guided mentoring without rigid scripts.</p></div>
-      <div class="feat-card"><div class="feat-ico">📊</div><h3>Progress Tracking</h3><p>Automated reminders, milestone tracking, and dashboards to monitor programme health in real time.</p></div>
-      <div class="feat-card"><div class="feat-ico">🔒</div><h3>Secure & Compliant</h3><p>Data processing under GDPR-compliant German law with a signed Data Processing Agreement in place.</p></div>
-      <div class="feat-card"><div class="feat-ico">♾️</div><h3>Unlimited Programmes</h3><p>No limit on the number of mentoring programmes — CCDA can serve multiple communities and cohorts simultaneously.</p></div>
-      <div class="feat-card"><div class="feat-ico">🚀</div><h3>Scalable by Design</h3><p>Automatic tier upgrades as participation grows — no manual intervention needed to scale impact.</p></div>
+      <div class="feat-card"><div class="feat-ico" aria-hidden="true">🤖</div><h3>Magic Match AI</h3><p>Intelligent matching based on goals, experience, and community context — ensuring every pairing has real potential.</p></div>
+      <div class="feat-card"><div class="feat-ico" aria-hidden="true">📅</div><h3>Structured Journey</h3><p>Clear programme frameworks with flexible conversations — guided mentoring without rigid scripts.</p></div>
+      <div class="feat-card"><div class="feat-ico" aria-hidden="true">📊</div><h3>Progress Tracking</h3><p>Automated reminders, milestone tracking, and dashboards to monitor programme health in real time.</p></div>
+      <div class="feat-card"><div class="feat-ico" aria-hidden="true">🔒</div><h3>Secure & Compliant</h3><p>Data processing under GDPR-compliant German law with a signed Data Processing Agreement in place.</p></div>
+      <div class="feat-card"><div class="feat-ico" aria-hidden="true">♾️</div><h3>Unlimited Programmes</h3><p>No limit on the number of mentoring programmes — CCDA can serve multiple communities and cohorts simultaneously.</p></div>
+      <div class="feat-card"><div class="feat-ico" aria-hidden="true">🚀</div><h3>Scalable by Design</h3><p>Automatic tier upgrades as participation grows — no manual intervention needed to scale impact.</p></div>
     </div>
   </div>
 </section>
@@ -308,6 +314,7 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
 </section>
 
 <!-- FOOTER -->
+</main>
 <footer class="footer">
   <div class="footer-inner">
     <div style="display:flex;align-items:center;gap:14px;">
