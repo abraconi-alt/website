@@ -97,6 +97,13 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
 .impact-cell{background:#fff;padding:36px 20px;text-align:center}
 .impact-n{font-size:2.4rem;font-weight:800;color:var(--orchid);line-height:1;margin-bottom:5px}
 .impact-l{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#888}
+/* TESTIMONIAL */
+.testi-sec{padding:80px 0;background:var(--pale);border-top:1px solid var(--grey)}
+.testi-card{max-width:700px;margin:40px auto 0;background:#fff;border:1px solid var(--grey);border-radius:12px;padding:40px 44px;position:relative}
+.testi-card::before{content:'\201C';position:absolute;top:18px;left:28px;font-size:4rem;color:var(--orchid);opacity:.25;line-height:1;font-family:Georgia,serif}
+.testi-card blockquote{font-size:1.05rem;line-height:1.8;color:var(--indigo);font-style:italic;margin:0}
+.testi-card cite{display:block;margin-top:20px;font-size:13px;font-style:normal;font-weight:700;color:var(--orchid);letter-spacing:.05em}
+.testi-card .testi-role{font-size:12px;font-weight:600;color:#888;letter-spacing:.04em}
 /* CTA */
 .cta-sec{background:linear-gradient(135deg,var(--orchid) 0%,var(--indigo) 100%);padding:80px 5vw;text-align:center;position:relative;overflow:hidden}
 .cta-sec::before{content:'';position:absolute;width:400px;height:400px;border-radius:50%;border:1px solid rgba(255,255,255,.07);top:-150px;right:-80px}
@@ -157,7 +164,7 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
       </div>
       <div class="hero-card">
         <div class="hcard-logo">
-          <span>CCDA</span>
+          <img src="https://cido-mentoring.s3.us-east-1.amazonaws.com/CCDA-Logo-transparent.png" alt="CCDA Logo" style="max-height:60px;max-width:100%;object-fit:contain;">
         </div>
         <div>
           <div class="hcard-name">Christian Community Development Association</div>
@@ -280,6 +287,26 @@ h2 em{font-style:italic;font-weight:400;color:var(--orchid)}
       <div class="impact-cell"><div class="impact-n">87%</div><div class="impact-l">Of mentees feel more confident and empowered</div></div>
       <div class="impact-cell"><div class="impact-n">68%</div><div class="impact-l">Of mentored employees stay 5+ years</div></div>
       <div class="impact-cell"><div class="impact-n">38%</div><div class="impact-l">Higher retention for mentored women and minorities</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testi-sec">
+  <div class="w">
+    <div class="shd">
+      <div class="ey ey-i">Participant Testimonials</div>
+      <h2>Hear from Our <em>Mentees</em></h2>
+    </div>
+    <div class="testi-card">
+      <blockquote>The CCDA mentoring program was extremely helpful as I lean into a new leadership role. They matched me with someone who was very knowledgeable in areas I wanted to grow and continues to provide supportive guidance beyond the mentoring program.</blockquote>
+      <cite>Laura Bullock</cite>
+      <span class="testi-role">Mentee · CCDA Mentoring Programme</span>
+    </div>
+    <div class="testi-card">
+      <blockquote>I am thankful for this CCDA mentoring program because it connected me right away with a high-quality, experienced leader who was ready to share her knowledge and support me. As a younger leader, I recognize the importance of learning from those who are much more experienced than me.</blockquote>
+      <cite>Anonymous</cite>
+      <span class="testi-role">Mentee · CCDA Mentoring Programme</span>
     </div>
   </div>
 </section>
